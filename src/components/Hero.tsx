@@ -6,7 +6,7 @@ export const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://cdn.prod.website-files.com/65e6e45dfbf5318e712aa25e/660ee408b03bbd7e98f76b52_ND%20(1).jpg"
+          src="/banner.png"
           alt="Event atmosphere with silhouette"
           className="w-full h-full object-cover"
         />

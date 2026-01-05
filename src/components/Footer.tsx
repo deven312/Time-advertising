@@ -29,7 +29,7 @@ export const Footer = () => {
             className="lg:col-span-3"
           >
             <span className="text-lg font-light tracking-widest text-foreground">
-              NEXUSEVENT
+            Time Advertising
             </span>
           </motion.div>
 

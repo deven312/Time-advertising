@@ -26,7 +26,7 @@ export const Navbar = () => {
           <div className="flex items-center justify-between px-6 md:px-12 lg:px-20 py-6">
             <a href="/" className="relative z-50">
               <span className="text-xl md:text-2xl font-light tracking-widest text-foreground">
-                NEXUSEVENT
+              Time Advertising
               </span>
             </a>
             <button

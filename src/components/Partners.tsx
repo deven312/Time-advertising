@@ -3,17 +3,17 @@ import { useRef } from "react";
 
 const partners = [
   {
-    name: "Architect",
-    logo: "https://cdn.prod.website-files.com/65e6e45dfbf5318e712aa25e/66044e18973aca10951e3752_Logo%20Partner.svg",
+    name: "Amazon Prime Video",
+    logo: "/Amazon_Prime_Video_logo.png",
   },
   {
-    name: "Saumer",
-    logo: "https://cdn.prod.website-files.com/65e6e45dfbf5318e712aa25e/66044e184142f40dc26ac56f_Logo%20Partner%202.svg",
+    name: "Tata IPl",
+    logo: "/Ipl.png",
   },
   {
-    name: "North Company",
-    logo: "https://cdn.prod.website-files.com/65e6e45dfbf5318e712aa25e/66044e196c067552ac5ef2b9_Logo%20Partner%203.svg",
-  },
+    name: "Zee 5",
+    logo: "/Zee5-Logo.png",
+ },
 ];
 
 export const Partners = () => {

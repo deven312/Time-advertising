@@ -37,28 +37,28 @@ const BenefitCard = ({ benefit, index }: { benefit: typeof benefits[0]; index: n
         initial={{ scaleX: 0 }}
         animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
         transition={{ duration: 0.8, delay: index * 0.2 }}
-        className="h-px bg-primary origin-left mb-8"
+        className="h-px bg-black origin-left mb-8"
       />
 
       <div className="space-y-6">
         <div className="flex items-center gap-6">
           <div className="w-16 h-16 flex-shrink-0">
-            <img src={benefit.icon} alt="" className="w-full h-full object-contain invert" />
+            <img src={benefit.icon} alt="" className="w-full h-full object-contain" />
           </div>
-          <h3 className="text-2xl md:text-3xl font-light text-foreground">{benefit.title}</h3>
+          <h3 className="text-2xl md:text-3xl font-light text-black">{benefit.title}</h3>
         </div>
-        <p className="text-medium text-muted-foreground leading-relaxed">
+        <p className="text-medium text-black leading-relaxed">
           {benefit.description}
         </p>
       </div>
 
       {/* Bottom Line */}
-      <motion.div
+      {/* <motion.div
         initial={{ scaleX: 0 }}
         animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
         transition={{ duration: 0.8, delay: index * 0.2 + 0.3 }}
         className="h-px bg-primary origin-left mt-8"
-      />
+      /> */}
     </motion.div>
   );
 };
@@ -68,7 +68,7 @@ export const Benefits = () => {
   const titleInView = useInView(titleRef, { once: true });
 
   return (
-    <section id="about" className="section-padding">
+    <section id="about" className="section-padding bg-white text-black">
       <motion.div
         ref={titleRef}
         initial={{ opacity: 0, y: 30 }}
@@ -76,7 +76,7 @@ export const Benefits = () => {
         transition={{ duration: 0.6 }}
         className="mb-16 md:mb-24"
       >
-        <h2 className="heading-section text-foreground max-w-4xl">
+        <h2 className="heading-section text-black max-w-4xl">
           Transforming events, redefining excellence
         </h2>
       </motion.div>

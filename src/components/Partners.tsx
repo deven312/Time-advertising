@@ -57,7 +57,7 @@ export const Partners = () => {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-h-full max-w-[200px] object-contain invert opacity-80 group-hover:opacity-100 transition-opacity"
+                    className="max-h-full max-w-[200px] object-contain opacity-90 group-hover:opacity-100 transition-opacity"
                   />
                 </div>
                 <motion.div

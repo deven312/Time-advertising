@@ -6,15 +6,16 @@ export const Quote = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-white">
       <div ref={ref} className="max-w-5xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extralight leading-tight text-foreground">
-            <span className="text-primary">"Great minds</span> discuss ideas; average minds discuss events; small minds discuss people."
+          <p className="text-5xl md:text-4xl lg:text-5xl xl:text-6xl font-extralight leading-tight text-black">
+            <span className="text-primary">Great minds</span>
+            <span className="text-black"> discuss ideas; average minds discuss events; small minds discuss people.</span>
           </p>
         </motion.div>
 
@@ -29,7 +30,7 @@ export const Quote = () => {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-xl md:text-2xl font-light text-muted-foreground"
+          className="text-2xl md:text-2xl font-light text-black text-right mt-6"
         >
           Eleanor Roosevelt
         </motion.p>

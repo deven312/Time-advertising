@@ -32,20 +32,24 @@ const FAQItem = ({ faq, index }: { faq: typeof faqs[0]; index: number }) => {
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="border-b border-border"
+      className={`border-b ${isOpen ? "border-transparent" : "border-black"}`}
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full py-6 flex items-center justify-between text-left group"
       >
-        <h3 className="text-xl md:text-2xl font-light text-foreground pr-8 group-hover:text-primary transition-colors">
+        <h3
+          className={`text-xl md:text-2xl font-light pr-8 transition-colors ${
+            isOpen ? "text-[#6AAB23]" : "text-black group-hover:text-primary"
+          }`}
+        >
           {faq.question}
         </h3>
-        <div className="flex-shrink-0 w-10 h-10 border border-border flex items-center justify-center group-hover:border-primary transition-colors">
+        <div className="flex-shrink-0 w-10 h-10 border border-black flex items-center justify-center group-hover:border-primary transition-colors">
           {isOpen ? (
-            <Minus className="w-5 h-5 text-primary" />
+            <Minus className="w-5 h-5 text-[#6AAB23]" />
           ) : (
-            <Plus className="w-5 h-5 text-foreground group-hover:text-primary transition-colors" />
+            <Plus className="w-5 h-5 text-black group-hover:text-primary transition-colors" />
           )}
         </div>
       </button>
@@ -57,12 +61,12 @@ const FAQItem = ({ faq, index }: { faq: typeof faqs[0]; index: number }) => {
         className="overflow-hidden"
       >
         <div className="pb-6">
-          <p className="text-medium text-muted-foreground">{faq.answer}</p>
+          <p className="text-medium text-black">{faq.answer}</p>
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: isOpen ? 1 : 0 }}
             transition={{ duration: 0.5 }}
-            className="h-px bg-primary origin-left mt-6"
+            className="h-px bg-[#6AAB23] origin-left mt-6"
           />
         </div>
       </motion.div>
@@ -75,7 +79,7 @@ export const FAQ = () => {
   const titleInView = useInView(titleRef, { once: true });
 
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-white text-black">
       <motion.div
         ref={titleRef}
         initial={{ opacity: 0, y: 30 }}
@@ -83,7 +87,7 @@ export const FAQ = () => {
         transition={{ duration: 0.6 }}
         className="mb-16 md:mb-24"
       >
-        <h2 className="heading-section text-foreground">Have Questions? Find Answers Here!</h2>
+        <h2 className="heading-section text-black">Have Questions? Find Answers Here!</h2>
       </motion.div>
 
       <div className="max-w-4xl">

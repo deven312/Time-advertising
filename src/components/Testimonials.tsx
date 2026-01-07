@@ -56,11 +56,11 @@ const TestimonialCard = ({ testimonial, index }: { testimonial: typeof testimoni
             className="w-16 h-16 rounded-full object-cover"
           />
           <div>
-            <h3 className="text-xl font-light text-foreground">{testimonial.name}</h3>
-            <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+            <h3 className="text-xl font-light text-black">{testimonial.name}</h3>
+            <p className="text-sm text-black">{testimonial.role}</p>
           </div>
         </div>
-        <p className="text-medium text-muted-foreground leading-relaxed">
+        <p className="text-medium text-black leading-relaxed">
           "{testimonial.quote}"
         </p>
       </div>
@@ -73,7 +73,7 @@ export const Testimonials = () => {
   const titleInView = useInView(titleRef, { once: true });
 
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-white text-black">
       <motion.div
         ref={titleRef}
         initial={{ opacity: 0, y: 30 }}
@@ -81,7 +81,7 @@ export const Testimonials = () => {
         transition={{ duration: 0.6 }}
         className="mb-16 md:mb-24 max-w-4xl"
       >
-        <h2 className="heading-section text-foreground">
+        <h2 className="heading-section text-black text-4xl">
           Listen to what our clients have to say about their experiences with NexusEvent.
         </h2>
       </motion.div>

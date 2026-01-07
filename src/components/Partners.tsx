@@ -13,7 +13,7 @@ const partners = [
   {
     name: "Zee 5",
     logo: "/Zee5-Logo.png",
- },
+  },
 ];
 
 export const Partners = () => {

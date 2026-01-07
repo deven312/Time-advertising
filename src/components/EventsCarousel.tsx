@@ -43,7 +43,7 @@ export const EventsCarousel = () => {
   };
 
   return (
-    <section id="events" className="section-padding">
+    <section id="events" className="section-padding bg-white text-black">
       <motion.div
         ref={titleRef}
         initial={{ opacity: 0, y: 30 }}
@@ -51,7 +51,7 @@ export const EventsCarousel = () => {
         transition={{ duration: 0.6 }}
         className="mb-16 md:mb-24"
       >
-        <h2 className="heading-section text-foreground">Our Variant Events</h2>
+        <h2 className="heading-section text-black">Our Variant Events</h2>
       </motion.div>
 
       <div className="relative">
@@ -72,16 +72,16 @@ export const EventsCarousel = () => {
                     />
                   </div>
                   <div className="space-y-4">
-                    <h3 className="text-2xl font-light text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="text-2xl font-light text-black group-hover:text-primary transition-colors">
                       {event.title}
                     </h3>
-                    <p className="text-medium text-muted-foreground">
+                    <p className="text-medium text-black">
                       {event.description}
                     </p>
                   </div>
                   <div className="mt-6 flex items-center justify-between">
-                    <div className="w-10 h-10 border border-border flex items-center justify-center group-hover:border-primary group-hover:bg-primary transition-all">
-                      <ArrowRight className="w-5 h-5 text-foreground group-hover:text-primary-foreground transition-colors" />
+                    <div className="w-10 h-10 border border-black flex items-center justify-center group-hover:border-primary group-hover:bg-primary transition-all">
+                      <ArrowRight className="w-5 h-5 text-black group-hover:text-primary-foreground transition-colors" />
                     </div>
                     <motion.div
                       initial={{ scaleX: 0 }}
@@ -100,17 +100,17 @@ export const EventsCarousel = () => {
         <div className="flex items-center justify-center gap-4 mt-12">
           <button
             onClick={prevSlide}
-            className="w-12 h-12 border border-border flex items-center justify-center text-foreground hover:border-primary hover:text-primary transition-colors"
+            className="w-12 h-12 border border-black flex items-center justify-center text-black hover:border-primary hover:text-primary transition-colors"
             aria-label="Previous slide"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={nextSlide}
-            className="w-12 h-12 border border-border flex items-center justify-center text-foreground hover:border-primary hover:text-primary transition-colors"
+            className="w-12 h-12 border border-black flex items-center justify-center text-black hover:border-primary hover:text-primary transition-colors"
             aria-label="Next slide"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ArrowRight className="w-6 h-6" />
           </button>
         </div>
       </div>
